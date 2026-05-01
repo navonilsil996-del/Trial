@@ -1,0 +1,53 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background: #87CEEB; /* Sky blue */
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #cceeff; /* light sky so player/ground/obstacles stand out */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* On-screen buttons */
+#btnJump, #btnCrouch {
+  position: fixed;
+  bottom: 40px;/*prev 55*/
+  width: 60px;
+  height: 50px;
+  border: none;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  background: rgba(0, 0, 0, 0.65);
+  cursor: pointer;
+  user-select: none;
+  z-index: 1000;
+}
+
+#btnJump {
+  right: 750px; /* place Jump to the left */
+}
+
+#btnCrouch {
+  right: 40px;  /* place Crouch on far right */
+}
+
+#btnJump:active,
+#btnCrouch:active {
+  background: rgba(0, 0, 0, 0.85);
+
+}
+
+
+
+
